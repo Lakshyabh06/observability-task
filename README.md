@@ -115,7 +115,7 @@ OpenSearch answers:
 
 > **“What exactly has been happening, and what patterns can I investigate?”**
 
-The assignment intentionally combines both approaches. fileciteturn28file4L307-L326
+The assignment intentionally combines both approaches.
 
 ---
 
@@ -140,19 +140,19 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-    A["Sample App"]
-    --> B["/metrics endpoint"]
-    B --> C["Kubernetes Service"]
-    C --> D["ServiceMonitor"]
-    D --> E["Prometheus"]
+    A[Sample App]
+    --> B[/metrics]
+    B --> C[Service]
+    C --> D[ServiceMonitor]
+    D --> E[Prometheus]
 
-    F["node-exporter"] --> E
-    G["kube-state-metrics"] --> E
+    F[node-exporter] --> E
+    G[kube-state-metrics] --> E
 
-    E --> H["Grafana"]
-    E --> I["PrometheusRule"]
-    I --> J["Alert"]
-    J --> K["Email"]
+    E --> H[Grafana]
+    E --> I[PrometheusRule]
+    I --> J[Alert]
+    J --> K[Email]
 ```
 
 ---
@@ -257,7 +257,7 @@ Discover → Visualizations → Dashboard
 | Failure path | S3, failed records only |
 | Error logging | CloudWatch enabled |
 
-The assignment specifically calls for Lambda transformation, OpenSearch delivery, daily index rotation, and a failed-record-only S3 backup. fileciteturn28file1L92-L142
+The assignment specifically calls for Lambda transformation, OpenSearch delivery, daily index rotation, and a failed-record-only S3 backup.
 
 ### What did the transformed data look like?
 
@@ -421,7 +421,7 @@ The expected Prometheus discovery label was also applied:
 release: kube-prometheus-stack
 ```
 
-The assignment specifically calls out ServiceMonitor discovery and the release-label match as an important validation point. fileciteturn28file2L187-L194
+The assignment specifically calls out ServiceMonitor discovery and the release-label match as an important validation point.
 
 ### Prometheus proof
 
@@ -511,7 +511,7 @@ Restore deployment to 2
 | Failure tested | 5xx errors | Delivery/transform path | High CPU | Application unavailable |
 | Notification | SNS email | — | Grafana email | Alerting email |
 
-The progression is intentional: logs first, then richer log analytics, then metrics on VMs, then metrics in Kubernetes. The assignment itself frames the three observability pillars around logs, metrics, and traces, with traces outside the required scope. fileciteturn28file4L305-L315
+The progression is intentional: logs first, then richer log analytics, then metrics on VMs, then metrics in Kubernetes. The assignment itself frames the three observability pillars around logs, metrics, and traces, with traces outside the required scope.
 
 ---
 
