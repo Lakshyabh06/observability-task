@@ -140,19 +140,19 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-    A[Sample App]
-    --> B[/metrics]
-    B --> C[Service]
-    C --> D[ServiceMonitor]
-    D --> E[Prometheus]
+    A["Sample App"]
+    --> B["/metrics endpoint"]
+    B --> C["Kubernetes Service"]
+    C --> D["ServiceMonitor"]
+    D --> E["Prometheus"]
 
-    F[node-exporter] --> E
-    G[kube-state-metrics] --> E
+    F["node-exporter"] --> E
+    G["kube-state-metrics"] --> E
 
-    E --> H[Grafana]
-    E --> I[PrometheusRule]
-    I --> J[Alert]
-    J --> K[Email]
+    E --> H["Grafana"]
+    E --> I["PrometheusRule"]
+    I --> J["Alert"]
+    J --> K["Email"]
 ```
 
 ---
