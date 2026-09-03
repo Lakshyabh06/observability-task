@@ -605,7 +605,7 @@ A persistence attempt in EKS exposed the dependency on an available Kubernetes s
 
 # 🧹 Cost Hygiene & Teardown
 
-The assignment explicitly treats cleanup as part of the deliverable, not an optional afterthought. fileciteturn28file2L174-L183
+The assignment explicitly treats cleanup as part of the deliverable, not an optional afterthought.
 
 After the screenshots and functional validation were complete, the lab infrastructure was removed.
 
